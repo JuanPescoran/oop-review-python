@@ -2,7 +2,7 @@ from src.resource import Resource, ResourceType
 
 class ConsumableResource(Resource):
     def __init__(self, name:str, capacity: int):
-        super().__init__(name, Resource.CONSUMABLE, capacity)
+        super().__init__(name, ResourceType.USABLE)
         if capacity <= 0:
             raise ValueError("Capacity must be greater than zero.")
         self._total_capacity = capacity

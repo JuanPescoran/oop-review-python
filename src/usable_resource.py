@@ -10,7 +10,7 @@ class UsableResource(Resource):
     def is_available_for_use(self) -> bool:
         return self._is_available
 
-    def allocate_resource(self) -> None:
+    def allocate(self) -> None:
         if not self._is_available:
             print(f"Warning: Resource '{self.name}' is not available for use.")
         self._is_available = False
